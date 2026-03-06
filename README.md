@@ -87,3 +87,12 @@ SHOW TABLES;
 SELECT * FROM user;
 <img width="1737" height="936" alt="Screenshot 2026-03-06 232458" src="https://github.com/user-attachments/assets/168a19b7-dec1-4a6e-905c-72a8b2ab6909" />
 <img width="513" height="371" alt="Screenshot 2026-03-06 232536" src="https://github.com/user-attachments/assets/43cedd11-d03c-4bd6-8785-cdf5af4031e1" />
+
+
+# Conclusion
+This project successfully demonstrates migration of a local MariaDB database from EC2 to Amazon RDS, ensuring a smooth transition from self-managed databases to managed AWS database services.
+
+# Contact
+Author: Dhiraj Waghumbare
+Email: dhiraj.waghumbare@outlook.com
+Linkedin: https://www.linkedin.com/in/dhiraj-waghumbare
