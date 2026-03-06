@@ -6,28 +6,28 @@ This workflow outlines the end-to-end process of migrating a MariaDB database fr
 
 Key Workflow:
 
-    - Configure MariaDB on EC2
+- Configure MariaDB on EC2
 
 - Create and populate the source database
 
-Export the database using mysqldump
+- Export the database using mysqldump
 
-Import and validate data in Amazon RDS
+- Import and validate data in Amazon RDS
 
 # Prerequisites
--> AWS EC2 instance with SSH access
--> AWS RDS MariaDB instance
--> Security Group allowing:
-    -> Port 22 (SSH)
-    -> Port 3306 (MariaDB)
--> RDS endpoint, username, and password
+- AWS EC2 instance with SSH access
+- AWS RDS MariaDB instance
+- Security Group allowing:
+    - Port 22 (SSH)
+    - Port 3306 (MariaDB)
+- RDS endpoint, username, and password
 
 # Step 1: Install MariaDB on EC2
-#!/bin/bash
-sudo apt update -y
-sudo apt install mariadb-server mariadb-client -y
-sudo systemctl start mariadb
-sudo systemctl enable mariadb
+    #!/bin/bash
+    sudo apt update -y
+    sudo apt install mariadb-server mariadb-client -y
+    sudo systemctl start mariadb
+    sudo systemctl enable mariadb
 <img width="1643" height="707" alt="image" src="https://github.com/user-attachments/assets/82f4dd30-e244-4ac0-b825-af5984dca679" />
 <img width="1186" height="532" alt="Screenshot 2026-03-06 221059" src="https://github.com/user-attachments/assets/564fd458-625e-46ad-9bb6-d60967fcca04" />
 
