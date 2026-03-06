@@ -93,7 +93,7 @@ USE Student_db;
 
 Restore Backup to RDS
 ```bash
-sudo mysql -h <rds-endpoint> -u <rds-username> -p Student_db < Student_bkp.sql
+sudo mysql -h <rds-endpoint> -u <rds-username> -p Student_db < Student_db_bkp.sql
 ```
 # Step 5: Verify Migration on RDS
 ```sql    
