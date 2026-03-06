@@ -119,7 +119,7 @@ This project successfully demonstrates migration of a local MariaDB database fro
 
 # Contact
 
-Author: Dhiraj Waghumbare
+Name: Dhiraj Waghumbare
 
 Email: dhiraj.waghumbare@outlook.com
 
