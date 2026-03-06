@@ -32,8 +32,10 @@ Key Workflow:
 <img width="1186" height="532" alt="Screenshot 2026-03-06 221059" src="https://github.com/user-attachments/assets/564fd458-625e-46ad-9bb6-d60967fcca04" />
 
 # Step 2: Configure Traditional MariaDB Ec2 and Create Database
-    sudo mysql -u root -p
-
+```bash   
+sudo mysql -u root -p
+```
+```sql
     SHOW DATABASES;
 
     CREATE DATABASE Student_db;
@@ -56,10 +58,11 @@ Key Workflow:
     (7,'Mangesh','Shirdi');
     
     SELECT * FROM user;
-
+```
 <img width="555" height="122" alt="Screenshot 2026-03-06 225747" src="https://github.com/user-attachments/assets/c71afabe-3c7e-4f89-be0b-0eacc66c403e" />
 <img width="1095" height="64" alt="Screenshot 2026-03-06 225809" src="https://github.com/user-attachments/assets/c74cc41f-b063-4315-9724-bd0da5428a82" />
 <img width="1892" height="422" alt="Screenshot 2026-03-06 225834" src="https://github.com/user-attachments/assets/cf26420f-a9a4-4235-ba87-fa652caa6fee" />
+---
 
 # Step 3: Backup Traditional Database
     mysqldump -u root -p Student_db > student_db_bkp.sql
