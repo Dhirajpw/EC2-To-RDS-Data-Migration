@@ -32,60 +32,60 @@ Key Workflow:
 <img width="1186" height="532" alt="Screenshot 2026-03-06 221059" src="https://github.com/user-attachments/assets/564fd458-625e-46ad-9bb6-d60967fcca04" />
 
 # Step 2: Configure Traditional MariaDB Ec2 and Create Database
-sudo mysql -u root -p
+    sudo mysql -u root -p
 
-SHOW DATABASES;
+    SHOW DATABASES;
 
-CREATE DATABASE Student_db;
-SHOW DATABASES;
+    CREATE DATABASE Student_db;
+    SHOW DATABASES;
 
-USE Student_db;
-CREATE TABLE user (
-  id INT,
-  name VARCHAR(10),
-  location VARCHAR(20)
-);
+    USE Student_db;
+    CREATE TABLE user (
+      id INT,
+      name VARCHAR(10),
+      location VARCHAR(20)
+    );
 
-INSERT INTO user VALUES
-(1,'Vishal','Pune'),
-(2,'Ganesh','Chakan'),
-(3,'Sanket','Kolhapur'),
-(4,'Omkar','Ahamedabad'),
-(5,'Yashraj','Sambhajinagar'),
-(6,'Rushikesh','Ahilyanagar'),
-(7,'Mangesh','Shirdi');
-
-SELECT * FROM user;
+    INSERT INTO user VALUES
+    (1,'Vishal','Pune'),
+    (2,'Ganesh','Chakan'),
+    (3,'Sanket','Kolhapur'),
+    (4,'Omkar','Ahamedabad'),
+    (5,'Yashraj','Sambhajinagar'),
+    (6,'Rushikesh','Ahilyanagar'),
+    (7,'Mangesh','Shirdi');
+    
+    SELECT * FROM user;
 
 <img width="555" height="122" alt="Screenshot 2026-03-06 225747" src="https://github.com/user-attachments/assets/c71afabe-3c7e-4f89-be0b-0eacc66c403e" />
 <img width="1095" height="64" alt="Screenshot 2026-03-06 225809" src="https://github.com/user-attachments/assets/c74cc41f-b063-4315-9724-bd0da5428a82" />
 <img width="1892" height="422" alt="Screenshot 2026-03-06 225834" src="https://github.com/user-attachments/assets/cf26420f-a9a4-4235-ba87-fa652caa6fee" />
 
 # Step 3: Backup Traditional Database
-mysqldump -u root -p Student_db > student_db_bkp.sql
+    mysqldump -u root -p Student_db > student_db_bkp.sql
 <img width="779" height="966" alt="Screenshot 2026-03-06 230129" src="https://github.com/user-attachments/assets/8d550de0-aea0-4d4f-a1b6-9bcf543887fe" />
 
 # Step 4.1: Create RDS instance
 Create RDS server and attach to the running instance
 <img width="1358" height="225" alt="Screenshot 2026-03-06 231630" src="https://github.com/user-attachments/assets/8c90f96d-b2ad-4cd5-9f38-8a57221e1735" />
 # Step 4.2: Connect to AWS RDS to EC2
-sudo mysql -h <rds-endpoint> -u <rds-username> -p
+    sudo mysql -h <rds-endpoint> -u <rds-username> -p
 <img width="1471" height="320" alt="Screenshot 2026-03-06 232033" src="https://github.com/user-attachments/assets/23aec4d3-c6a9-46e9-94ed-d265f584c2a4" />
 
 Create new database in RDS and Restore Backup to RDS:
-CREATE DATABASE Student_db;
-SHOW DATABASES;
-USE Student_db;
+    CREATE DATABASE Student_db;
+    SHOW DATABASES;
+    USE Student_db;
 <img width="1737" height="936" alt="Screenshot 2026-03-06 232458" src="https://github.com/user-attachments/assets/83640b36-3f75-459f-8c75-a2390d000517" />
 
 Restore Backup to RDS
-sudo mysql -h <rds-endpoint> -u <rds-username> -p Student_db < Student_bkp.sql
+    sudo mysql -h <rds-endpoint> -u <rds-username> -p Student_db < Student_bkp.sql
 
 # Step 5: Verify Migration on RDS
-SHOW DATABASES;
-USE Student_db;
-SHOW TABLES;
-SELECT * FROM user;
+    SHOW DATABASES;
+    USE Student_db;
+    SHOW TABLES;
+    SELECT * FROM user;
 <img width="1737" height="936" alt="Screenshot 2026-03-06 232458" src="https://github.com/user-attachments/assets/168a19b7-dec1-4a6e-905c-72a8b2ab6909" />
 <img width="513" height="371" alt="Screenshot 2026-03-06 232536" src="https://github.com/user-attachments/assets/43cedd11-d03c-4bd6-8785-cdf5af4031e1" />
 
