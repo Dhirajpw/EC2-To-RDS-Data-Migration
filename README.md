@@ -3,11 +3,12 @@ This project demonstrates how to migrate a database from an Amazon EC2 instance 
 # Architecture Overview
 <img width="1672" height="655" alt="Screenshot 2026-03-06 201316" src="https://github.com/user-attachments/assets/a33c4f9a-c6c0-4ce5-9643-1a4ee9e7f89b" />
 This workflow outlines the end-to-end process of migrating a MariaDB database from EC2 to Amazon RDS. It includes installing and configuring MariaDB on the EC2 instance, creating and populating the source database, generating a consistent backup using mysqldump, and restoring the data into the RDS MariaDB instance. Secure connectivity between EC2 and RDS is ensured through correctly configured security group rules and MariaDB client access, enabling a smooth and reliable migration.
+
 Key Workflow:
 
-Configure MariaDB on EC2
+    - Configure MariaDB on EC2
 
-Create and populate the source database
+- Create and populate the source database
 
 Export the database using mysqldump
 
