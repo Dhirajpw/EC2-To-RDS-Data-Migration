@@ -118,6 +118,9 @@ SELECT * FROM user;
 This project successfully demonstrates migration of a local MariaDB database from EC2 to Amazon RDS, ensuring a smooth transition from self-managed databases to managed AWS database services.
 
 # Contact
+
 Author: Dhiraj Waghumbare
+
 Email: dhiraj.waghumbare@outlook.com
+
 Linkedin: https://www.linkedin.com/in/dhiraj-waghumbare
